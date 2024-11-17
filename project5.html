@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style for navigation bar container */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        /* Style for navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for nav items */
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Active class to highlight selected link */
+        .active {
+            background-color: #008CBA;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" id="home" onclick="setActive(this)">Home</a>
+    <a href="#" onclick="setActive(this)">About</a>
+    <a href="#" onclick="setActive(this)">Services</a>
+    <a href="#" onclick="setActive(this)">Contact</a>
+</nav>
+
+<script>
+    function setActive(link) {
+        // Remove 'active' class from all links
+        document.querySelectorAll("nav a").forEach(item => item.classList.remove("active"));
+        
+        // Add 'active' class to the clicked link
+        link.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
